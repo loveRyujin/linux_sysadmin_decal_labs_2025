@@ -29,7 +29,7 @@ elif [ "$1" = "lookup" ]; then
 elif [ "$1" = "remove" ]; then
     # YOUR CODE HERE #
     grep -v -F "$2" "$PHONEBOOK_ENTRIES" | while IFS=$'\t' read -r line; do
-    	echo $line >> "$PHONEBOOK_ENTRIES.txt"
+    	echo "$line" >> "$PHONEBOOK_ENTRIES.txt"
     done
 
     mv "$PHONEBOOK_ENTRIES.txt" "$PHONEBOOK_ENTRIES"
